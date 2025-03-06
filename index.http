@@ -1,0 +1,41 @@
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2M5N2M5MjhlYzJmYzJiYjNlZjhjZGYiLCJpYXQiOjE3NDEyNTc4NzQsImV4cCI6MTc0MTI1Nzg3NX0.iJiEyWm4GPhIYYkjc--Qb-HwvYJkdxYt7OsMR1yyF1c
+
+###
+GET http://localhost:3000/api/users/a
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+"name":"Tomeu",
+"age":"20",
+"email":"aaaaaa@gmail.com",
+"password":"qwerty1234"
+}
+
+###
+DELETE http://localhost:3000/api/users/a
+
+###
+PATCH http://localhost:3000/api/storage
+Content-Type: multipart/form-data; boundary=boundary123
+
+--boundary123
+Content-Disposition: form-data; name=image; filename="imagen.jpg"
+Content-Type: image/jpeg
+
+< ./imagen.jpg
+--boundary123--
+
+###
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+"name":"Tomeu",
+"age":"20",
+"email":"aaaaaa@gmail.com",
+"password":"123456789"
+}
