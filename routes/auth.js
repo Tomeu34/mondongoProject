@@ -19,7 +19,7 @@ router.post("/register", validatorRegister, async (req, res) => {
         user: dataUser
     }
     res.send(data)
-})
+}) 
 
 //TODO router.post("/login", (req, res) => {}
 module.exports = router
